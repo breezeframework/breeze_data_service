@@ -1,4 +1,4 @@
-module breeze_data_service
+module github.com/breezeframework/breeze_data_service
 
 go 1.23.2
 
