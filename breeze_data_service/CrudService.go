@@ -35,7 +35,7 @@ func (s *GenericService[T]) GetAll(ctx context.Context) (*[]T, error) {
 	return s.Repo.GetAll(ctx)
 }
 func (s *GenericService[T]) GetBy(ctx context.Context, where squirrel.Eq) (*[]T, error) {
-	return s.Repo.GetAll(ctx)
+	return s.Repo.GetBy(ctx, where)
 }
 
 func (s *GenericService[T]) Update(ctx context.Context, id int64, entity T) error {
