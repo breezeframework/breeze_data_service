@@ -17,9 +17,9 @@ type GenericService[T any] struct {
 	Repo repository.CrudRepository[T]
 }
 
-/*func NewGenericService[T any](Repo repository.CrudRepository[T]) *GenericService[T] {
-	return &GenericService[T]{Repo: Repo}
-}*/
+func NewGenericService[T any](repo repository.CrudRepository[T]) *GenericService[T] {
+	return &GenericService[T]{Repo: repo}
+}
 
 func (s *GenericService[T]) Create(ctx context.Context, entity T) (int64, error) {
 	return s.Repo.Create(ctx, entity)
