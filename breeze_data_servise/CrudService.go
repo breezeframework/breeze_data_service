@@ -2,7 +2,7 @@ package breeze_data_service
 
 import (
 	"context"
-	"github.com/breezeframework/breeze_data/repository"
+	"github.com/breezeframework/breeze_data/breeze_data"
 )
 
 type CrudService[T any] interface {
@@ -14,10 +14,10 @@ type CrudService[T any] interface {
 }
 
 type GenericService[T any] struct {
-	Repo repository.CrudRepository[T]
+	Repo breeze_data.CrudRepository[T]
 }
 
-func NewGenericService[T any](repo repository.CrudRepository[T]) *GenericService[T] {
+func NewGenericService[T any](repo breeze_data.CrudRepository[T]) *GenericService[T] {
 	return &GenericService[T]{Repo: repo}
 }
 
