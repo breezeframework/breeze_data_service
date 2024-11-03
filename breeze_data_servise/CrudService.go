@@ -14,29 +14,29 @@ type CrudService[T any] interface {
 }
 
 type GenericService[T any] struct {
-	repo repository.CrudRepository[T]
+	Repo repository.CrudRepository[T]
 }
 
-func NewGenericService[T any](repo repository.CrudRepository[T]) *GenericService[T] {
-	return &GenericService[T]{repo: repo}
-}
+/*func NewGenericService[T any](Repo repository.CrudRepository[T]) *GenericService[T] {
+	return &GenericService[T]{Repo: Repo}
+}*/
 
 func (s *GenericService[T]) Create(ctx context.Context, entity T) (int64, error) {
-	return s.repo.Create(ctx, entity)
+	return s.Repo.Create(ctx, entity)
 }
 
 func (s *GenericService[T]) GetById(ctx context.Context, id int64) (*T, error) {
-	return s.repo.GetById(ctx, id)
+	return s.Repo.GetById(ctx, id)
 }
 
 func (s *GenericService[T]) GetAll(ctx context.Context) (*[]T, error) {
-	return s.repo.GetAll(ctx)
+	return s.Repo.GetAll(ctx)
 }
 
 func (s *GenericService[T]) Update(ctx context.Context, id int64, entity T) error {
-	return s.repo.Update(ctx, id, entity)
+	return s.Repo.Update(ctx, id, entity)
 }
 
 func (s *GenericService[T]) Delete(ctx context.Context, id int64) error {
-	return s.repo.Delete(ctx, id)
+	return s.Repo.Delete(ctx, id)
 }
