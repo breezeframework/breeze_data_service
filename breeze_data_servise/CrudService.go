@@ -1,4 +1,4 @@
-package breeze_data_servise
+package breeze_data_service
 
 import (
 	"context"
