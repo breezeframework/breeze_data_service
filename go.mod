@@ -1,6 +1,6 @@
 module github.com/breezeframework/breeze_data_service
 
-go 1.23.2
+go 1.23.0
 
 require github.com/breezeframework/breeze_data v0.1.7
 
