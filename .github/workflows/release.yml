@@ -33,7 +33,7 @@ jobs:
           fi
 
           echo "::set-output name=latest::$latest_tag"
-      
+          
           echo "Latest tag is: $latest_tag"
           echo "latest=$latest_tag" >> $GITHUB_ENV
 
