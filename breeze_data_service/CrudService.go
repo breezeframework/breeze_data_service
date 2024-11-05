@@ -15,33 +15,33 @@ type CrudService[T any] interface {
 	Delete(ctx context.Context, id int64) error
 }
 
-type GenericService[T any] struct {
+type CrudServiceImpl[T any] struct {
 	Repo breeze_data.CrudRepository[T]
 }
 
 func NewGenericService[T any](repo breeze_data.CrudRepository[T]) CrudService[T] {
-	return &GenericService[T]{Repo: repo}
+	return &CrudServiceImpl[T]{Repo: repo}
 }
 
-func (s *GenericService[T]) Create(ctx context.Context, entity T) (int64, error) {
+func (s *CrudServiceImpl[T]) Create(ctx context.Context, entity T) (int64, error) {
 	return s.Repo.Create(ctx, entity)
 }
 
-func (s *GenericService[T]) GetById(ctx context.Context, id int64) (*T, error) {
+func (s *CrudServiceImpl[T]) GetById(ctx context.Context, id int64) (*T, error) {
 	return s.Repo.GetById(ctx, id)
 }
 
-func (s *GenericService[T]) GetAll(ctx context.Context) (*[]T, error) {
+func (s *CrudServiceImpl[T]) GetAll(ctx context.Context) (*[]T, error) {
 	return s.Repo.GetAll(ctx)
 }
-func (s *GenericService[T]) GetBy(ctx context.Context, where squirrel.Eq) (*[]T, error) {
+func (s *CrudServiceImpl[T]) GetBy(ctx context.Context, where squirrel.Eq) (*[]T, error) {
 	return s.Repo.GetBy(ctx, where)
 }
 
-func (s *GenericService[T]) Update(ctx context.Context, id int64, entity T) error {
+func (s *CrudServiceImpl[T]) Update(ctx context.Context, id int64, entity T) error {
 	return s.Repo.Update(ctx, id, entity)
 }
 
-func (s *GenericService[T]) Delete(ctx context.Context, id int64) error {
+func (s *CrudServiceImpl[T]) Delete(ctx context.Context, id int64) error {
 	return s.Repo.Delete(ctx, id)
 }
