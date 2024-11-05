@@ -24,24 +24,24 @@ func NewCrudService[T any](repo breeze_data.CrudRepository[T]) CrudServiceImpl[T
 }
 
 func (s *CrudServiceImpl[T]) Create(ctx context.Context, entity T) (int64, error) {
-	return s.Repo.Create(ctx, entity)
+	return s.Create(ctx, entity)
 }
 
 func (s *CrudServiceImpl[T]) GetById(ctx context.Context, id int64) (*T, error) {
-	return s.Repo.GetById(ctx, id)
+	return s.GetById(ctx, id)
 }
 
 func (s *CrudServiceImpl[T]) GetAll(ctx context.Context) (*[]T, error) {
-	return s.Repo.GetAll(ctx)
+	return s.GetAll(ctx)
 }
 func (s *CrudServiceImpl[T]) GetBy(ctx context.Context, where squirrel.Eq) (*[]T, error) {
-	return s.Repo.GetBy(ctx, where)
+	return s.GetBy(ctx, where)
 }
 
 func (s *CrudServiceImpl[T]) Update(ctx context.Context, id int64, entity T) error {
-	return s.Repo.Update(ctx, id, entity)
+	return s.Update(ctx, id, entity)
 }
 
 func (s *CrudServiceImpl[T]) Delete(ctx context.Context, id int64) error {
-	return s.Repo.Delete(ctx, id)
+	return s.Delete(ctx, id)
 }
