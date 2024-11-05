@@ -16,32 +16,32 @@ type CrudService[T any] interface {
 }
 
 type CrudServiceImpl[T any] struct {
-	Repo breeze_data.CrudRepository[T]
+	repo breeze_data.CrudRepository[T]
 }
 
 func NewCrudService[T any](repo breeze_data.CrudRepository[T]) CrudServiceImpl[T] {
-	return CrudServiceImpl[T]{Repo: repo}
+	return CrudServiceImpl[T]{repo: repo}
 }
 
 func (s *CrudServiceImpl[T]) Create(ctx context.Context, entity T) (int64, error) {
-	return s.Create(ctx, entity)
+	return s.repo.Create(ctx, entity)
 }
 
 func (s *CrudServiceImpl[T]) GetById(ctx context.Context, id int64) (*T, error) {
-	return s.GetById(ctx, id)
+	return s.repo.GetById(ctx, id)
 }
 
 func (s *CrudServiceImpl[T]) GetAll(ctx context.Context) (*[]T, error) {
-	return s.GetAll(ctx)
+	return s.repo.GetAll(ctx)
 }
 func (s *CrudServiceImpl[T]) GetBy(ctx context.Context, where squirrel.Eq) (*[]T, error) {
-	return s.GetBy(ctx, where)
+	return s.repo.GetBy(ctx, where)
 }
 
 func (s *CrudServiceImpl[T]) Update(ctx context.Context, id int64, entity T) error {
-	return s.Update(ctx, id, entity)
+	return s.repo.Update(ctx, id, entity)
 }
 
 func (s *CrudServiceImpl[T]) Delete(ctx context.Context, id int64) error {
-	return s.Delete(ctx, id)
+	return s.repo.Delete(ctx, id)
 }
