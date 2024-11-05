@@ -19,8 +19,8 @@ type CrudServiceImpl[T any] struct {
 	Repo breeze_data.CrudRepository[T]
 }
 
-func NewGenericService[T any](repo breeze_data.CrudRepository[T]) CrudService[T] {
-	return &CrudServiceImpl[T]{Repo: repo}
+func NewCrudService[T any](repo breeze_data.CrudRepository[T]) CrudServiceImpl[T] {
+	return CrudServiceImpl[T]{Repo: repo}
 }
 
 func (s *CrudServiceImpl[T]) Create(ctx context.Context, entity T) (int64, error) {
