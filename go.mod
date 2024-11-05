@@ -4,7 +4,7 @@ go 1.23.0
 
 require (
 	github.com/Masterminds/squirrel v1.5.4
-	github.com/breezeframework/breeze_data v0.1.16
+	github.com/breezeframework/breeze_data v0.1.17
 )
 
 require (

@@ -6,6 +6,8 @@ github.com/breezeframework/breeze_data v0.1.15 h1:lFMYm+2f52kXxEUSFrE6TJ7LRbO/JF
 github.com/breezeframework/breeze_data v0.1.15/go.mod h1:eLYJLpCTEOp9xJwWmaOOhM7LJ5PGr3u7j5gfQFYolDo=
 github.com/breezeframework/breeze_data v0.1.16 h1:pLEspH3/34w1+ttE/bbTIwfLBsfV1E3Q4vu6W2J3X1M=
 github.com/breezeframework/breeze_data v0.1.16/go.mod h1:eLYJLpCTEOp9xJwWmaOOhM7LJ5PGr3u7j5gfQFYolDo=
+github.com/breezeframework/breeze_data v0.1.17 h1:oGilU+ByhAsfYuD/Ui802odV8ZCKiHF7ZBM2GeZ4UUE=
+github.com/breezeframework/breeze_data v0.1.17/go.mod h1:eLYJLpCTEOp9xJwWmaOOhM7LJ5PGr3u7j5gfQFYolDo=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
