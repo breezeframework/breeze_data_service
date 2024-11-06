@@ -12,6 +12,8 @@ github.com/breezeframework/breeze_data v0.1.18 h1:SmY5ru3NSUD5xY3CAsy6CXRseHz+os
 github.com/breezeframework/breeze_data v0.1.18/go.mod h1:eLYJLpCTEOp9xJwWmaOOhM7LJ5PGr3u7j5gfQFYolDo=
 github.com/breezeframework/breeze_data v0.1.19 h1:f2FXTCyA3TFMKe+HmqqGoUPmy6CipzYTVinCljHHqcM=
 github.com/breezeframework/breeze_data v0.1.19/go.mod h1:eLYJLpCTEOp9xJwWmaOOhM7LJ5PGr3u7j5gfQFYolDo=
+github.com/breezeframework/breeze_data v0.1.20 h1:+gju8l4heXuM4orIuKLZLQFk3rovu/k2JbYawBsvHkM=
+github.com/breezeframework/breeze_data v0.1.20/go.mod h1:eLYJLpCTEOp9xJwWmaOOhM7LJ5PGr3u7j5gfQFYolDo=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
